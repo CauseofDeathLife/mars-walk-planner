@@ -1,0 +1,12 @@
+{
+  "test": "1.6",
+  "criterion": "Pearson r >= 0.6",
+  "n": 933,
+  "pearson_r_aligned": 0.5477432230524883,
+  "pearson_r_unaligned_informative": 0.13749990959211972,
+  "tilt_mean_deg": 9.645198285101822,
+  "slope_mean_deg": 9.304508861042036,
+  "slope_minus_tilt_mean_deg": -0.34068942405978686,
+  "slope_minus_tilt_std_deg": 4.612889698996208,
+  "result": "FAIL"
+}
