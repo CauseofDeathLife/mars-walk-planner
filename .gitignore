@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large NASA source files: download them as described in data/README.md
+# (GitHub rejects files over 100 MB; the HiRISE DTM alone is 182 MB)
+data/*.tif
+data/Mars_Viking_MDIM21_ClrMosaic_1km.jpg
+
+# Regenerated caches
+results/app/globe_texture.jpg
