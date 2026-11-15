@@ -1,0 +1,17 @@
+{
+ "rows": 952,
+ "segment_mean_sols": [
+  1821.3,
+  2869.4,
+  3761.7,
+  4593.6
+ ],
+ "std_stepped_all_m": 1.8328322480401138,
+ "std_smooth_all_m": 1.6166503157563226,
+ "std_stepped_control_m": 1.8589259530434965,
+ "std_smooth_control_m": 1.6550679845464389,
+ "max_abs_smooth_m": 6.064830092984643,
+ "largest_shift_change_between_stops_stepped_m": 28.858490951537988,
+ "largest_shift_change_between_stops_smooth_m": 1.8732067945936932,
+ "result": "PASS"
+}
