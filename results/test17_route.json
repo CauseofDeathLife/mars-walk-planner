@@ -1,0 +1,47 @@
+{
+  "test": "1.7",
+  "slope_limit_deg": 15.0,
+  "grid_cell_m": [
+    5.041053725402859,
+    5.058733972897556
+  ],
+  "grid_shape": [
+    347,
+    455
+  ],
+  "window_nodata_pct": 0.0,
+  "A": {
+    "sol": 4183,
+    "site": 107,
+    "drive": 1140,
+    "easting": 8144750.635,
+    "northing": -283648.42
+  },
+  "B": {
+    "sol": 4534,
+    "site": 116,
+    "drive": 0,
+    "easting": 8143446.442,
+    "northing": -284404.584
+  },
+  "straight_distance_m": 1503.6072067394966,
+  "grid_prep_s": 0.014574766159057617,
+  "astar": {
+    "found": true,
+    "cost": 1877.2989228140725,
+    "expanded": 22002,
+    "seconds": 0.16093039512634277
+  },
+  "dijkstra": {
+    "found": true,
+    "cost": 1877.2989228140725,
+    "expanded": 94723,
+    "seconds": 0.6159000396728516
+  },
+  "route_vertices": 283,
+  "route_ground_length_m": 1701.3793595976483,
+  "route_max_edge_slope_deg": 13.923786276168306,
+  "edges_over_limit": 0,
+  "cost_equal_rel_diff": 0.0,
+  "result": "PASS"
+}

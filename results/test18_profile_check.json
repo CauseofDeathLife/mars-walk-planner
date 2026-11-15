@@ -1,0 +1,38 @@
+{
+  "test": "1.8",
+  "samples": 1984,
+  "gm_total_distance_m": 1701.4,
+  "script_route_length_m": 1701.3793595976483,
+  "max_abs_dz_m": 0.0007679860773350811,
+  "mean_abs_dz_m": 0.00025665624103922825,
+  "gm_max_abs_slope_deg": 16.2,
+  "samples_over_15deg": 8,
+  "samples_over_15deg_pct": 0.4032258064516129,
+  "heights_ok": true,
+  "slope_ok": false,
+  "result": "FAIL",
+  "over_limit_at_distance_m": [
+    10.0,
+    10.082,
+    25.0,
+    25.24,
+    26.0,
+    636.0,
+    637.0,
+    638.0
+  ],
+  "slope_values_over_limit_deg": [
+    15.5,
+    15.7,
+    15.4,
+    15.5,
+    16.2,
+    15.4,
+    15.8,
+    15.2
+  ],
+  "informative_max_slope_5m_baseline_deg": 14.927850991597648,
+  "informative_pct_over_15_5m_baseline": 0.0,
+  "informative_max_slope_10m_baseline_deg": 13.750084157262583,
+  "informative_pct_over_15_10m_baseline": 0.0
+}

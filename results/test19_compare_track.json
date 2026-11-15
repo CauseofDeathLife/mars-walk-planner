@@ -1,0 +1,18 @@
+{
+  "test": "1.9",
+  "type": "informative",
+  "stops_between": 110,
+  "sols": [
+    4183,
+    4534
+  ],
+  "curiosity_track_length_m": 2585.99059058412,
+  "route_length_m": 1701.3793595976483,
+  "curiosity_odometry_m": 2891.020000000004,
+  "mean_route_to_track_m": 62.89934639074474,
+  "max_route_to_track_m": 138.3492361333391,
+  "hausdorff_m": 178.16216325107962,
+  "curiosity_dtm_slope_at_stops_max_deg": 25.895325923099023,
+  "curiosity_tilt_max_deg": 22.37,
+  "curiosity_stops_with_dtm_slope_over_15": 5
+}

@@ -1,0 +1,37 @@
+{
+  "check": "1.8b informative",
+  "corridor_m": 100.0,
+  "grid_shape": [
+    950,
+    1490
+  ],
+  "corridor_cells": 363521,
+  "prep_s": 8.650490045547485,
+  "route5_length_m": 1701.3793595976483,
+  "attempts": [
+    {
+      "planning_limit_deg": 15.0,
+      "found": true,
+      "astar_s": 3.0528995990753174,
+      "expanded": 285331,
+      "route_vertices": 1398,
+      "route_length_m": 1692.435710764485,
+      "profile_samples": 2795,
+      "max_slope_1m_deg": 15.184343256291724,
+      "samples_over_15": 2
+    },
+    {
+      "planning_limit_deg": 14.5,
+      "found": true,
+      "astar_s": 2.7652158737182617,
+      "expanded": 283237,
+      "route_vertices": 1402,
+      "route_length_m": 1693.9620022819224,
+      "profile_samples": 2803,
+      "max_slope_1m_deg": 14.434965379011121,
+      "samples_over_15": 0
+    }
+  ],
+  "chosen_planning_limit_deg": 14.5,
+  "result": "MEETS 15 deg at 1 m"
+}
