@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "area_center": [
+      8143900.0,
+      -284800.0
+    ],
+    "area_half_m": 1750.0,
+    "slope_limit_deg": 15.0,
+    "grid_shape": [
+      692,
+      691
+    ],
+    "cell_m": [
+      5.04095718312716,
+      5.058733972897556
+    ],
+    "valid_cells": 444875,
+    "obstacle_pct_of_valid": 35.38,
+    "reachable_pct_of_valid": 49.76,
+    "stops_in_area": 296,
+    "stops_reachable": 285
+  },
+  "points": [
+    {
+      "id": "H",
+      "kind": "habitat",
+      "label": "Habitat",
+      "easting": 8143745.867,
+      "northing": -283896.656,
+      "elevation": -3705.748,
+      "distance_from_habitat_m": 0.0,
+      "footprint_max_slope_deg": 4.81
+    },
+    {
+      "id": "T1",
+      "kind": "target",
+      "label": "Curiosity sol 4071",
+      "easting": 8144626.086,
+      "northing": -283203.61,
+      "elevation": -3744.85,
+      "distance_from_habitat_m": 1117.9,
+      "sol": 4071,
+      "site": 105,
+      "drive": 1808,
+      "stop_easting_aligned": 8144624.528,
+      "stop_northing_aligned": -283204.294
+    },
+    {
+      "id": "T2",
+      "kind": "target",
+      "label": "Curiosity sol 4298",
+      "easting": 8144757.613,
+      "northing": -283810.658,
+      "elevation": -3666.868,
+      "distance_from_habitat_m": 1011.9,
+      "sol": 4298,
+      "site": 108,
+      "drive": 2162,
+      "stop_easting_aligned": 8144756.792,
+      "stop_northing_aligned": -283812.355
+    },
+    {
+      "id": "T3",
+      "kind": "target",
+      "label": "Curiosity sol 4389",
+      "easting": 8144191.035,
+      "northing": -283562.78,
+      "elevation": -3714.534,
+      "distance_from_habitat_m": 555.2,
+      "sol": 4389,
+      "site": 111,
+      "drive": 2722,
+      "stop_easting_aligned": 8144189.718,
+      "stop_northing_aligned": -283561.082
+    },
+    {
+      "id": "T4",
+      "kind": "target",
+      "label": "Curiosity sol 4532",
+      "easting": 8143457.519,
+      "northing": -284397.471,
+      "elevation": -3648.651,
+      "distance_from_habitat_m": 577.4,
+      "sol": 4532,
+      "site": 115,
+      "drive": 2616,
+      "stop_easting_aligned": 8143459.09,
+      "stop_northing_aligned": -284397.435
+    },
+    {
+      "id": "T5",
+      "kind": "target",
+      "label": "Curiosity sol 4600",
+      "easting": 8143047.761,
+      "northing": -284792.052,
+      "elevation": -3622.775,
+      "distance_from_habitat_m": 1133.9,
+      "sol": 4600,
+      "site": 117,
+      "drive": 2370,
+      "stop_easting_aligned": 8143046.321,
+      "stop_northing_aligned": -284794.1
+    },
+    {
+      "id": "T6",
+      "kind": "target",
+      "label": "Curiosity sol 4865",
+      "easting": 8143123.642,
+      "northing": -285363.689,
+      "elevation": -3566.484,
+      "distance_from_habitat_m": 1592.7,
+      "sol": 4865,
+      "site": 121,
+      "drive": 2826,
+      "stop_easting_aligned": 8143124.257,
+      "stop_northing_aligned": -285363.168
+    },
+    {
+      "id": "T7",
+      "kind": "target",
+      "label": "Curiosity sol 4987",
+      "easting": 8143457.519,
+      "northing": -285854.386,
+      "elevation": -3499.164,
+      "distance_from_habitat_m": 1978.7,
+      "sol": 4987,
+      "site": 124,
+      "drive": 1062,
+      "stop_easting_aligned": 8143457.318,
+      "stop_northing_aligned": -285854.324
+    },
+    {
+      "id": "X1",
+      "kind": "isolated",
+      "label": "Isolated area 1",
+      "easting": 8144155.624,
+      "northing": -284013.007,
+      "elevation": -3610.375,
+      "distance_from_habitat_m": 424.6,
+      "island_area_m2": 128626
+    },
+    {
+      "id": "X2",
+      "kind": "isolated",
+      "label": "Isolated area 2",
+      "easting": 8143118.584,
+      "northing": -283512.193,
+      "elevation": -3742.444,
+      "distance_from_habitat_m": 733.8,
+      "island_area_m2": 12929
+    }
+  ]
+}
