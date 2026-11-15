@@ -1,0 +1,9 @@
+{
+  "source": "https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json",
+  "retrieved": "2026-11-14",
+  "credit": "REMS, Centro de Astrobiología (CAB, CSIC-INTA) · NASA/JPL-Caltech",
+  "latest": {"id": "4746", "sol": "4995", "terrestrial_date": "2026-08-25", "ls": "341", "season": "Month 12",
+             "min_temp": "-71", "max_temp": "-5", "min_gts_temp": "-84", "max_gts_temp": "4", "pressure": "777",
+             "pressure_string": "Higher", "abs_humidity": "--", "wind_speed": "--", "wind_direction": "--",
+             "atmo_opacity": "Sunny", "local_uv_irradiance_index": "Moderate", "sunrise": "06:46", "sunset": "18:51"}
+}

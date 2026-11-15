@@ -1,0 +1,398 @@
+{
+ "source": "https://mars.nasa.gov/api/v1/raw_image_items/ (mission msl, search NAV_LEFT_B, by sol)",
+ "retrieved": "2026-11-14",
+ "selection": "stops of the track at least 400 m apart and 150 m away from the targets; NAV_LEFT_B full frames with the stop's site and drive, frames 3 and 5 of the post-drive panorama by time",
+ "stops": [
+  {
+   "sol": 1469,
+   "site": 58,
+   "drive": 264,
+   "photos": [
+    {
+     "id": "NLB_527906221EDR_F0580264NCAM00254M_",
+     "date": "2016-09-23",
+     "path": "01469/opgs/edr/ncam/NLB_527906221EDR_F0580264NCAM00254M_.JPG"
+    },
+    {
+     "id": "NLB_527906269EDR_F0580264NCAM00254M_",
+     "date": "2016-09-23",
+     "path": "01469/opgs/edr/ncam/NLB_527906269EDR_F0580264NCAM00254M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 1514,
+   "site": 59,
+   "drive": 1998,
+   "photos": [
+    {
+     "id": "NLB_531910224EDR_F0591998NCAM00275M_",
+     "date": "2016-11-08",
+     "path": "01514/opgs/edr/ncam/NLB_531910224EDR_F0591998NCAM00275M_.JPG"
+    },
+    {
+     "id": "NLB_531910293EDR_F0591998NCAM00275M_",
+     "date": "2016-11-08",
+     "path": "01514/opgs/edr/ncam/NLB_531910293EDR_F0591998NCAM00275M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 1642,
+   "site": 61,
+   "drive": 2740,
+   "photos": [
+    {
+     "id": "NLB_543262844EDR_F0612740NCAM00284M_",
+     "date": "2017-03-20",
+     "path": "01642/opgs/edr/ncam/NLB_543262844EDR_F0612740NCAM00284M_.JPG"
+    },
+    {
+     "id": "NLB_543262907EDR_F0612740NCAM00284M_",
+     "date": "2017-03-20",
+     "path": "01642/opgs/edr/ncam/NLB_543262907EDR_F0612740NCAM00284M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 1718,
+   "site": 63,
+   "drive": 2582,
+   "photos": [
+    {
+     "id": "NLB_550010635EDR_F0632582NCAM00282M_",
+     "date": "2017-06-06",
+     "path": "01718/opgs/edr/ncam/NLB_550010635EDR_F0632582NCAM00282M_.JPG"
+    },
+    {
+     "id": "NLB_550010692EDR_F0632582NCAM00282M_",
+     "date": "2017-06-06",
+     "path": "01718/opgs/edr/ncam/NLB_550010692EDR_F0632582NCAM00282M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 1807,
+   "site": 65,
+   "drive": 3200,
+   "photos": [
+    {
+     "id": "NLB_557914659EDR_F0653200NCAM00298M_",
+     "date": "2017-09-05",
+     "path": "01807/opgs/edr/ncam/NLB_557914659EDR_F0653200NCAM00298M_.JPG"
+    },
+    {
+     "id": "NLB_557914715EDR_F0653200NCAM00298M_",
+     "date": "2017-09-05",
+     "path": "01807/opgs/edr/ncam/NLB_557914715EDR_F0653200NCAM00298M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 1989,
+   "site": 68,
+   "drive": 1626,
+   "photos": [
+    {
+     "id": "NLB_574078090EDR_F0681626NCAM00256M_",
+     "date": "2018-03-11",
+     "path": "01989/opgs/edr/ncam/NLB_574078090EDR_F0681626NCAM00256M_.JPG"
+    },
+    {
+     "id": "NLB_574078155EDR_F0681626NCAM00256M_",
+     "date": "2018-03-11",
+     "path": "01989/opgs/edr/ncam/NLB_574078155EDR_F0681626NCAM00256M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 2616,
+   "site": 78,
+   "drive": 834,
+   "photos": [
+    {
+     "id": "NLB_629740181EDR_F0780834NCAM00253M_",
+     "date": "2019-12-16",
+     "path": "02616/opgs/edr/ncam/NLB_629740181EDR_F0780834NCAM00253M_.JPG"
+    },
+    {
+     "id": "NLB_629740251EDR_F0780834NCAM00353M_",
+     "date": "2019-12-16",
+     "path": "02616/opgs/edr/ncam/NLB_629740251EDR_F0780834NCAM00353M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 2813,
+   "site": 82,
+   "drive": 0,
+   "photos": [
+    {
+     "id": "NLB_647223555EDR_F0820000NCAM00280M_",
+     "date": "2020-07-05",
+     "path": "02813/opgs/edr/ncam/NLB_647223555EDR_F0820000NCAM00280M_.JPG"
+    },
+    {
+     "id": "NLB_647223618EDR_F0820000NCAM00280M_",
+     "date": "2020-07-05",
+     "path": "02813/opgs/edr/ncam/NLB_647223618EDR_F0820000NCAM00280M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 2965,
+   "site": 84,
+   "drive": 1030,
+   "photos": [
+    {
+     "id": "NLB_660726999EDR_F0841030NCAM00261M_",
+     "date": "2020-12-08",
+     "path": "02965/opgs/edr/ncam/NLB_660726999EDR_F0841030NCAM00261M_.JPG"
+    },
+    {
+     "id": "NLB_660727057EDR_F0841030NCAM00261M_",
+     "date": "2020-12-08",
+     "path": "02965/opgs/edr/ncam/NLB_660727057EDR_F0841030NCAM00261M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3026,
+   "site": 86,
+   "drive": 618,
+   "photos": [
+    {
+     "id": "NLB_666131126EDR_F0860618NCAM00268M_",
+     "date": "2021-02-09",
+     "path": "03026/opgs/edr/ncam/NLB_666131126EDR_F0860618NCAM00268M_.JPG"
+    },
+    {
+     "id": "NLB_666131181EDR_F0860618NCAM00268M_",
+     "date": "2021-02-09",
+     "path": "03026/opgs/edr/ncam/NLB_666131181EDR_F0860618NCAM00268M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3154,
+   "site": 89,
+   "drive": 724,
+   "photos": [
+    {
+     "id": "NLB_677490989EDR_F0890724NCAM00283M_",
+     "date": "2021-06-20",
+     "path": "03154/opgs/edr/ncam/NLB_677490989EDR_F0890724NCAM00283M_.JPG"
+    },
+    {
+     "id": "NLB_677491037EDR_F0890724NCAM00283M_",
+     "date": "2021-06-20",
+     "path": "03154/opgs/edr/ncam/NLB_677491037EDR_F0890724NCAM00283M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3216,
+   "site": 90,
+   "drive": 2990,
+   "photos": [
+    {
+     "id": "NLB_682996347EDR_F0902990NCAM00279M_",
+     "date": "2021-08-23",
+     "path": "03216/opgs/edr/ncam/NLB_682996347EDR_F0902990NCAM00279M_.JPG"
+    },
+    {
+     "id": "NLB_682996403EDR_F0902990NCAM00279M_",
+     "date": "2021-08-23",
+     "path": "03216/opgs/edr/ncam/NLB_682996403EDR_F0902990NCAM00279M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3467,
+   "site": 95,
+   "drive": 0,
+   "photos": [
+    {
+     "id": "NLB_705278066EDR_F0950000NCAM00265M_",
+     "date": "2022-05-08",
+     "path": "03467/opgs/edr/ncam/NLB_705278066EDR_F0950000NCAM00265M_.JPG"
+    },
+    {
+     "id": "NLB_705278130EDR_F0950000NCAM00265M_",
+     "date": "2022-05-08",
+     "path": "03467/opgs/edr/ncam/NLB_705278130EDR_F0950000NCAM00265M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3570,
+   "site": 97,
+   "drive": 256,
+   "photos": [
+    {
+     "id": "NLB_714421600EDR_F0970256NCAM00278M_",
+     "date": "2022-08-22",
+     "path": "03570/opgs/edr/ncam/NLB_714421600EDR_F0970256NCAM00278M_.JPG"
+    },
+    {
+     "id": "NLB_714421656EDR_F0970256NCAM00278M_",
+     "date": "2022-08-22",
+     "path": "03570/opgs/edr/ncam/NLB_714421656EDR_F0970256NCAM00278M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3815,
+   "site": 101,
+   "drive": 774,
+   "photos": [
+    {
+     "id": "NLB_736170669EDR_F1010774NCAM00289M_",
+     "date": "2023-05-01",
+     "path": "03815/opgs/edr/ncam/NLB_736170669EDR_F1010774NCAM00289M_.JPG"
+    },
+    {
+     "id": "NLB_736170732EDR_F1010774NCAM00289M_",
+     "date": "2023-05-01",
+     "path": "03815/opgs/edr/ncam/NLB_736170732EDR_F1010774NCAM00289M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 3948,
+   "site": 104,
+   "drive": 652,
+   "photos": [
+    {
+     "id": "NLB_747985079EDR_F1040652NCAM00287M_",
+     "date": "2023-09-14",
+     "path": "03948/opgs/edr/ncam/NLB_747985079EDR_F1040652NCAM00287M_.JPG"
+    },
+    {
+     "id": "NLB_747985135EDR_F1040652NCAM00287M_",
+     "date": "2023-09-14",
+     "path": "03948/opgs/edr/ncam/NLB_747985135EDR_F1040652NCAM00287M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4176,
+   "site": 107,
+   "drive": 384,
+   "photos": [
+    {
+     "id": "NLB_768216765EDR_F1070384NCAM00274M_",
+     "date": "2024-05-05",
+     "path": "04176/opgs/edr/ncam/NLB_768216765EDR_F1070384NCAM00274M_.JPG"
+    },
+    {
+     "id": "NLB_768216822EDR_F1070384NCAM00274M_",
+     "date": "2024-05-05",
+     "path": "04176/opgs/edr/ncam/NLB_768216822EDR_F1070384NCAM00274M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4429,
+   "site": 112,
+   "drive": 1608,
+   "photos": [
+    {
+     "id": "NLB_790681172EDR_F1121608NCAM00290M_",
+     "date": "2025-01-20",
+     "path": "04429/opgs/edr/ncam/NLB_790681172EDR_F1121608NCAM00290M_.JPG"
+    },
+    {
+     "id": "NLB_790681227EDR_F1121608NCAM00290M_",
+     "date": "2025-01-20",
+     "path": "04429/opgs/edr/ncam/NLB_790681227EDR_F1121608NCAM00290M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4483,
+   "site": 114,
+   "drive": 780,
+   "photos": [
+    {
+     "id": "NLB_795472567EDR_F1140780NCAM00258M_",
+     "date": "2025-03-17",
+     "path": "04483/opgs/edr/ncam/NLB_795472567EDR_F1140780NCAM00258M_.JPG"
+    },
+    {
+     "id": "NLB_795472627EDR_F1140780NCAM00258M_",
+     "date": "2025-03-17",
+     "path": "04483/opgs/edr/ncam/NLB_795472627EDR_F1140780NCAM00258M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4548,
+   "site": 116,
+   "drive": 1260,
+   "photos": [
+    {
+     "id": "NLB_801252078EDR_F1161260NCAM00298M_",
+     "date": "2025-05-23",
+     "path": "04548/opgs/edr/ncam/NLB_801252078EDR_F1161260NCAM00298M_.JPG"
+    },
+    {
+     "id": "NLB_801252144EDR_F1161260NCAM00298M_",
+     "date": "2025-05-23",
+     "path": "04548/opgs/edr/ncam/NLB_801252144EDR_F1161260NCAM00298M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4641,
+   "site": 118,
+   "drive": 1944,
+   "photos": [
+    {
+     "id": "NLB_809504281EDR_F1181944NCAM00261M_",
+     "date": "2025-08-26",
+     "path": "04641/opgs/edr/ncam/NLB_809504281EDR_F1181944NCAM00261M_.JPG"
+    },
+    {
+     "id": "NLB_809504344EDR_F1181944NCAM00261M_",
+     "date": "2025-08-26",
+     "path": "04641/opgs/edr/ncam/NLB_809504344EDR_F1181944NCAM00261M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 4919,
+   "site": 122,
+   "drive": 1512,
+   "photos": [
+    {
+     "id": "NLB_834177936EDR_F1221512NCAM00269M_",
+     "date": "2026-06-08",
+     "path": "04919/opgs/edr/ncam/NLB_834177936EDR_F1221512NCAM00269M_.JPG"
+    },
+    {
+     "id": "NLB_834177991EDR_F1221512NCAM00269M_",
+     "date": "2026-06-08",
+     "path": "04919/opgs/edr/ncam/NLB_834177991EDR_F1221512NCAM00269M_.JPG"
+    }
+   ]
+  },
+  {
+   "sol": 5011,
+   "site": 124,
+   "drive": 2866,
+   "photos": [
+    {
+     "id": "NLB_842349713EDR_F1242866NCAM00254M_",
+     "date": "2026-09-10",
+     "path": "05011/opgs/edr/ncam/NLB_842349713EDR_F1242866NCAM00254M_.JPG"
+    },
+    {
+     "id": "NLB_842349770EDR_F1242866NCAM00254M_",
+     "date": "2026-09-10",
+     "path": "05011/opgs/edr/ncam/NLB_842349770EDR_F1242866NCAM00254M_.JPG"
+    }
+   ]
+  }
+ ]
+}

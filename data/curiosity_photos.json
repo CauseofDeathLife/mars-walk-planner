@@ -1,0 +1,171 @@
+{
+ "source": "https://mars.nasa.gov/api/v1/raw_image_items/ (mission msl, filtered by sol)",
+ "retrieved": "2026-11-14",
+ "selection": "NAV_LEFT_B full frames whose site and drive equal the stop's in MSL_waypoints.json; frames 3, 5 and 7 of the post-drive panorama by time",
+ "instrument": "Navcam izquierda",
+ "credit": "NASA/JPL-Caltech",
+ "base": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/",
+ "photos": {
+  "4071": [
+   {
+    "id": "NLB_758893617EDR_F1051808NCAM00266M_",
+    "date": "2024-01-19T00:45:50.000Z",
+    "path": "04071/opgs/edr/ncam/NLB_758893617EDR_F1051808NCAM00266M_.JPG",
+    "site": 105,
+    "drive": 1808
+   },
+   {
+    "id": "NLB_758893732EDR_F1051808NCAM00266M_",
+    "date": "2024-01-19T00:47:45.000Z",
+    "path": "04071/opgs/edr/ncam/NLB_758893732EDR_F1051808NCAM00266M_.JPG",
+    "site": 105,
+    "drive": 1808
+   },
+   {
+    "id": "NLB_758896303EDR_F1051808NCAM00267M_",
+    "date": "2024-01-19T01:30:36.000Z",
+    "path": "04071/opgs/edr/ncam/NLB_758896303EDR_F1051808NCAM00267M_.JPG",
+    "site": 105,
+    "drive": 1808
+   }
+  ],
+  "4298": [
+   {
+    "id": "NLB_779045780EDR_F1082162NCAM00251M_",
+    "date": "2024-09-08T06:38:24.000Z",
+    "path": "04298/opgs/edr/ncam/NLB_779045780EDR_F1082162NCAM00251M_.JPG",
+    "site": 108,
+    "drive": 2162
+   },
+   {
+    "id": "NLB_779045844EDR_F1082162NCAM00251M_",
+    "date": "2024-09-08T06:39:27.000Z",
+    "path": "04298/opgs/edr/ncam/NLB_779045844EDR_F1082162NCAM00251M_.JPG",
+    "site": 108,
+    "drive": 2162
+   },
+   {
+    "id": "NLB_779046427EDR_F1082162NCAM00354M_",
+    "date": "2024-09-08T06:49:10.000Z",
+    "path": "04298/opgs/edr/ncam/NLB_779046427EDR_F1082162NCAM00354M_.JPG",
+    "site": 108,
+    "drive": 2162
+   }
+  ],
+  "4389": [
+   {
+    "id": "NLB_787132862EDR_F1112722NCAM00263M_",
+    "date": "2024-12-10T21:04:25.000Z",
+    "path": "04389/opgs/edr/ncam/NLB_787132862EDR_F1112722NCAM00263M_.JPG",
+    "site": 111,
+    "drive": 2722
+   },
+   {
+    "id": "NLB_787132917EDR_F1112722NCAM00263M_",
+    "date": "2024-12-10T21:05:20.000Z",
+    "path": "04389/opgs/edr/ncam/NLB_787132917EDR_F1112722NCAM00263M_.JPG",
+    "site": 111,
+    "drive": 2722
+   },
+   {
+    "id": "NLB_787134085EDR_F1112722NCAM00264M_",
+    "date": "2024-12-10T21:24:49.000Z",
+    "path": "04389/opgs/edr/ncam/NLB_787134085EDR_F1112722NCAM00264M_.JPG",
+    "site": 111,
+    "drive": 2722
+   }
+  ],
+  "4532": [
+   {
+    "id": "NLB_799831061EDR_F1152616NCAM00276M_",
+    "date": "2025-05-06T20:23:06.000Z",
+    "path": "04532/opgs/edr/ncam/NLB_799831061EDR_F1152616NCAM00276M_.JPG",
+    "site": 115,
+    "drive": 2616
+   },
+   {
+    "id": "NLB_799831123EDR_F1152616NCAM00276M_",
+    "date": "2025-05-06T20:24:08.000Z",
+    "path": "04532/opgs/edr/ncam/NLB_799831123EDR_F1152616NCAM00276M_.JPG",
+    "site": 115,
+    "drive": 2616
+   },
+   {
+    "id": "NLB_799832216EDR_F1152616NCAM00277M_",
+    "date": "2025-05-06T20:42:20.000Z",
+    "path": "04532/opgs/edr/ncam/NLB_799832216EDR_F1152616NCAM00277M_.JPG",
+    "site": 115,
+    "drive": 2616
+   }
+  ],
+  "4600": [
+   {
+    "id": "NLB_805866028EDR_F1172370NCAM00256M_",
+    "date": "2025-07-15T16:46:50.000Z",
+    "path": "04600/opgs/edr/ncam/NLB_805866028EDR_F1172370NCAM00256M_.JPG",
+    "site": 117,
+    "drive": 2370
+   },
+   {
+    "id": "NLB_805866093EDR_F1172370NCAM00256M_",
+    "date": "2025-07-15T16:47:55.000Z",
+    "path": "04600/opgs/edr/ncam/NLB_805866093EDR_F1172370NCAM00256M_.JPG",
+    "site": 117,
+    "drive": 2370
+   },
+   {
+    "id": "NLB_805867311EDR_F1172370NCAM00257M_",
+    "date": "2025-07-15T17:08:13.000Z",
+    "path": "04600/opgs/edr/ncam/NLB_805867311EDR_F1172370NCAM00257M_.JPG",
+    "site": 117,
+    "drive": 2370
+   }
+  ],
+  "4865": [
+   {
+    "id": "NLB_829383894EDR_F1212826NCAM00293M_",
+    "date": "2026-04-13T21:35:01.000Z",
+    "path": "04865/opgs/edr/ncam/NLB_829383894EDR_F1212826NCAM00293M_.JPG",
+    "site": 121,
+    "drive": 2826
+   },
+   {
+    "id": "NLB_829383958EDR_F1212826NCAM00293M_",
+    "date": "2026-04-13T21:36:04.000Z",
+    "path": "04865/opgs/edr/ncam/NLB_829383958EDR_F1212826NCAM00293M_.JPG",
+    "site": 121,
+    "drive": 2826
+   },
+   {
+    "id": "NLB_829385202EDR_F1212826NCAM00294M_",
+    "date": "2026-04-13T21:56:48.000Z",
+    "path": "04865/opgs/edr/ncam/NLB_829385202EDR_F1212826NCAM00294M_.JPG",
+    "site": 121,
+    "drive": 2826
+   }
+  ],
+  "4987": [
+   {
+    "id": "NLB_840219379EDR_F1241062NCAM00283M_",
+    "date": "2026-08-17T07:28:08.000Z",
+    "path": "04987/opgs/edr/ncam/NLB_840219379EDR_F1241062NCAM00283M_.JPG",
+    "site": 124,
+    "drive": 1062
+   },
+   {
+    "id": "NLB_840219429EDR_F1241062NCAM00283M_",
+    "date": "2026-08-17T07:28:58.000Z",
+    "path": "04987/opgs/edr/ncam/NLB_840219429EDR_F1241062NCAM00283M_.JPG",
+    "site": 124,
+    "drive": 1062
+   },
+   {
+    "id": "NLB_840220456EDR_F1241062NCAM00284M_",
+    "date": "2026-08-17T07:46:05.000Z",
+    "path": "04987/opgs/edr/ncam/NLB_840220456EDR_F1241062NCAM00284M_.JPG",
+    "site": 124,
+    "drive": 1062
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "source": "https://mars.nasa.gov/api/v1/raw_image_items/ (mission msl, filtered by sol, MAST_LEFT and MAST_RIGHT)",
+  "retrieved": "2026-11-15",
+  "selection": "Colour (E01) Mastcam frames of the stop's sol taken after the first post-drive Navcam frame at that stop; three spread in time. Only sols 4071 and 4865 have colour frames published.",
+  "instrument": "Mastcam",
+  "credit": "NASA/JPL-Caltech/MSSS",
+  "base": "https://mars.nasa.gov/msl-raw-images/msss/",
+  "photos": {
+    "4071": [
+      {"id": "4071MR1051950012001930E01_DXXX", "date": "2024-01-19T01:12:52.000Z", "path": "04071/mcam/4071MR1051950012001930E01_DXXX.jpg"},
+      {"id": "4071MR1051950092001938E01_DXXX", "date": "2024-01-19T01:16:12.000Z", "path": "04071/mcam/4071MR1051950092001938E01_DXXX.jpg"},
+      {"id": "4071MR1051950212001950E01_DXXX", "date": "2024-01-19T01:20:49.000Z", "path": "04071/mcam/4071MR1051950212001950E01_DXXX.jpg"}
+    ],
+    "4865": [
+      {"id": "4865ML1091460000213137E01_DXXX", "date": "2026-04-13T21:37:50.000Z", "path": "04865/mcam/4865ML1091460000213137E01_DXXX.jpg"},
+      {"id": "4865ML1091460180113155E01_DXXX", "date": "2026-04-13T21:41:25.000Z", "path": "04865/mcam/4865ML1091460180113155E01_DXXX.jpg"},
+      {"id": "4865ML1091460210113158E01_DXXX", "date": "2026-04-13T21:42:07.000Z", "path": "04865/mcam/4865ML1091460210113158E01_DXXX.jpg"}
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "source": "https://api.nasa.gov/DONKI/WSAEnlilSimulations",
+  "retrieved": "2026-11-15",
+  "window_days": 36,
+  "credit": "DONKI, NASA CCMC (Community Coordinated Modeling Center)",
+  "event": {"cmeStart": "2026-11-09T18:15Z", "speed": 726, "arrival": "2026-11-13T12:00Z", "glancing": true,
+            "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/WSA-ENLIL/49473/-1"}
+}
