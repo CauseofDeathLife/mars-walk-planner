@@ -48,7 +48,7 @@
       const colour = COLOR && point && point.kind === 'target' ? COLOR.photos[String(point.sol)] : null;
       if (colour && colour.length) {   // Mastcam colour frames exist only for some stops
         const key = group(`C${point.sol}`, point.sol, colour, 'ph.atStopColor', COLOR, 'ph.instrumentColor');
-        out += `<div class="photos"><h4>${t('ph.color')}</h4><div class="thumbs">${thumbs(key, point.sol)}</div>` +
+        out += `<div class="photos color"><h4>${t('ph.color')}</h4><div class="thumbs">${thumbs(key, point.sol)}</div>` +
           `<p class="note">${t('ph.colorNote', point.sol, COLOR.credit)}</p></div>`;
       }
       const near = nearRoute();

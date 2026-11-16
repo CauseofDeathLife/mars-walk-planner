@@ -29,6 +29,7 @@
       MW.on('stopsVisible', on => { visible = on; items.forEach(it => { it.group.visible = on; }); });
     },
     stops() { return stops; },
+    positions() { return visible ? items.map(it => it.group.position) : []; },   // scene positions of the rovers
     // Stop under a screen position, or null
     pick(clientX, clientY) {
       if (!visible || !items.length) return null;

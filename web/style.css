@@ -178,7 +178,7 @@ footer { font-size: 12px; }
 
 #tourRing { position: fixed; z-index: 60; border: 2px solid var(--route); border-radius: 10px; pointer-events: none;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, .5); transition: all .25s ease; }
-#tourBubble { z-index: 61; width: 300px; font-size: 13.5px; border-color: var(--route); }
+#tourBubble { z-index: 61; width: 340px; font-size: 13.5px; border-color: var(--route); }
 #tourBubble .row { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 12px; }
 #tourBubble button { padding: 4px 10px; font-size: 12.5px; }
 
@@ -233,3 +233,5 @@ html[data-theme="light"] #intro .intro-lang button.on { color: #14263a; }
   display: flex; flex-direction: column; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
 #walkerLabel strong { font-weight: 600; }
 #walkerLabel span { color: var(--muted); font-size: 11.5px; }
+/* Tutorial: round highlight for points of the map */
+#tourRing.spot { border-radius: 50%; }

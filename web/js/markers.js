@@ -100,6 +100,8 @@
       MW.on('language', () => items.forEach(it => { it.label.textContent = MW.labelOf(it.p); }));
     },
     setStopsVisible(on) { stopLine.visible = on; MW.emit('stopsVisible', on); view.requestRender(); },
+    // Bright track while the tutorial points at it
+    highlightStops(on) { stopLine.material.color.set(on ? C.stopsHighlight : C.stops); view.requestRender(); },
     // Point id under a screen position, or null
     pick(clientX, clientY) {
       mouse.set(clientX / innerWidth * 2 - 1, -clientY / innerHeight * 2 + 1);

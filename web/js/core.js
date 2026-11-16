@@ -7,7 +7,7 @@ const MW = (() => {
   const ROUTE = '#3aa0ff', SAFE = '#4ade80', DANGER = '#f87171';
   const colors = {
     habitat: '#f4f1ea', target: '#ffb347', isolated: '#9aa3ad', from: SAFE, to: ROUTE, route: ROUTE, blocked: DANGER,
-    stops: '#5eead4', frame: '#ffffff', ok: SAFE, warn: '#fbbf24', bad: DANGER,
+    stops: '#5eead4', stopsHighlight: '#ffe14d', frame: '#ffffff', ok: SAFE, warn: '#fbbf24', bad: DANGER,
     walker: '#ffffff', walkerTrim: '#d5dbe2', walkerDark: '#1b2430', walkerVisor: '#d9a441',   // walk-through figure
   };
   // Visual themes: scene colours here, panel colours and type in style.css under html[data-theme]
