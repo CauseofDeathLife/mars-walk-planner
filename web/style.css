@@ -1,0 +1,228 @@
+:root {
+  --bg: #07090c; --panel: rgba(15, 18, 23, .9); --line: #2a2f37; --ink: #ece8e1; --muted: #9aa0a6;
+  --mars: #d9793b; --ctl: #1a1f27; --ctl-on: #2a313c; --card: rgba(255, 255, 255, .03); --label-bg: rgba(10, 12, 16, .78);
+  --on-accent: #04121f; --radius: 12px; --radius-sm: 8px; --blur: blur(5px); --shadow: none;
+  --font: system-ui, "Segoe UI", Roboto, sans-serif; --font-display: var(--font);   /* --route, --from, --ok, --warn, --bad, --stops… are set from MW.colors in core.js */
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); overflow: hidden;
+  font: 14px/1.45 var(--font); }
+#view { position: fixed; inset: 0; }
+#labels { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.label { position: absolute; transform: translate(-50%, -100%); padding: 1px 7px; border-radius: 9px; white-space: nowrap;
+  background: var(--label-bg); border: 1px solid var(--line); font-size: 12px; }
+.label.from { border-color: var(--from); color: var(--from); }
+.label.to { border-color: var(--route); color: var(--route); }
+.label.blocked { border-color: var(--bad); color: var(--bad); }
+
+.panel { position: fixed; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 12px 14px; backdrop-filter: var(--blur); box-shadow: var(--shadow); }
+.muted { color: var(--muted); }
+h1 { font-size: 18px; margin: 0; letter-spacing: .2px; }
+h2 { font-size: 12px; margin: 0 0 6px; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); }
+p { margin: 2px 0 0; }
+.hint { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+#panel { top: 12px; left: 12px; width: 340px; max-height: calc(100vh - 24px); overflow-y: auto; display: flex;
+  flex-direction: column; gap: 12px; }
+#panel section { position: relative; }
+.field { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.field.inline { display: flex; align-items: center; justify-content: space-between; margin: 6px 0 0; }
+select { width: 100%; margin-top: 2px; background: var(--ctl); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 8px; font: inherit; }
+.field.inline select { width: auto; margin: 0; }
+button { font: inherit; color: var(--ink); background: var(--ctl); border: 1px solid var(--line); border-radius: 8px;
+  padding: 6px 10px; cursor: pointer; }
+button:hover { border-color: #4a515c; }
+button.primary { background: var(--route); border-color: var(--route); color: var(--on-accent); font-weight: 600; }
+button.ghost { position: absolute; right: 0; top: 0; padding: 0 8px; line-height: 20px; font-size: 13px; }
+.check { display: flex; gap: 8px; align-items: center; margin-top: 8px; cursor: pointer; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; background: transparent; }
+.seg button.on { background: var(--ctl-on); font-weight: 600; }
+
+.card { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--card); }
+.card h3 { margin: 0 0 6px; font-size: 14px; }
+.card table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.card td { padding: 2px 0; vertical-align: top; }
+.card td:last-child { text-align: right; white-space: nowrap; padding-left: 8px; }
+.card .note { font-size: 11.5px; color: var(--muted); }
+.card.blocked { border-color: var(--bad); }
+.card.blocked h3 { color: var(--bad); }
+.margin { margin: 8px 0 4px; }
+.margin .bar { height: 10px; border-radius: 5px; background: var(--ctl-on); overflow: hidden; display: flex; }
+.margin .bar i { display: block; height: 100%; }
+.margin .out { background: #7c8794; } .margin .stay { background: #56606c; } .margin .back { background: #7c8794; }
+.margin .left.ok { background: var(--ok); } .margin .left.warn { background: var(--warn); }
+.margin .over { background: var(--bad); }
+.verdict { font-weight: 600; margin-top: 4px; }
+.verdict.ok { color: var(--ok); } .verdict.warn { color: var(--warn); } .verdict.bad { color: var(--bad); }
+.actions { display: flex; gap: 8px; margin-top: 10px; }
+
+details summary { cursor: pointer; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .8px; }
+.slider { display: block; margin-top: 8px; font-size: 12.5px; }
+.slider output { float: right; font-variant-numeric: tabular-nums; }
+.slider input { width: 100%; accent-color: var(--route); }
+footer { font-size: 12px; }
+#status .ok { color: var(--ok); }
+
+#compass { top: 12px; right: 12px; width: 84px; height: 84px; padding: 6px; border-radius: 50%; cursor: pointer; }
+#rose .ring { fill: none; stroke: var(--line); stroke-width: 1.5; }
+#rose .north { fill: var(--mars); } #rose .south { fill: #59616c; }
+#rose text { fill: var(--muted); font-size: 11px; text-anchor: middle; font-weight: 600; }
+#rose text.n { fill: #fff; font-size: 13px; }
+
+#navMode { top: 104px; right: 12px; width: 84px; padding: 0; grid-template-columns: 1fr; }
+#navMode button { padding: 6px 4px; font-size: 12.5px; color: var(--muted); }
+#navMode button.on { color: var(--ink); box-shadow: inset 3px 0 0 var(--route); }
+#navMode .icon { display: inline-block; width: 14px; text-align: center; }
+
+#conventionsTable { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 12.5px; }
+#conventionsTable td { padding: 3px 0; vertical-align: middle; }
+#conventionsTable td:first-child { width: 40px; }
+#conventionsTable svg { display: block; width: 32px; height: 18px; }
+#conventionsTable .group td { padding-top: 8px; font-size: 11.5px; color: var(--muted); }
+.walk-note { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+#profileInfo small { font-size: 11px; opacity: .8; }
+
+#badge { right: 12px; bottom: 12px; width: 300px; font-size: 12.5px; display: flex; flex-direction: column; gap: 5px; }
+#badge strong { color: var(--mars); font-size: 13.5px; }
+#legend { display: flex; flex-direction: column; gap: 3px; }
+#legendBar { height: 10px; border-radius: 5px; border: 1px solid var(--line); }
+#readout { font-variant-numeric: tabular-nums; border-top: 1px solid var(--line); padding-top: 5px; }
+.credit { font-size: 10.5px; }
+
+#profile { left: 366px; right: 326px; bottom: 12px; height: 168px; display: flex; flex-direction: column; gap: 4px; }
+#profile .row { display: flex; justify-content: space-between; gap: 12px; font-size: 12.5px; }
+#profileCanvas { flex: 1; width: 100%; min-height: 0; cursor: crosshair; }
+
+@media (max-width: 900px) {
+  #panel { width: calc(100vw - 24px); max-height: 46vh; }
+  #profile { left: 12px; right: 12px; bottom: 12px; height: 130px; }
+  #badge { display: none; }
+}
+[hidden] { display: none !important; }
+
+/* Block 2: photo layer, weather card, ground photos, data list, navigation hint next to its buttons */
+#segMode { grid-template-columns: 1fr 1fr; }
+#segMode.two { grid-template-columns: 1fr 1fr; }
+#segMode button { padding: 6px 4px; }
+#navHint { top: 174px; right: 12px; width: 132px; padding: 6px 9px; border-radius: 8px; font-size: 11px; line-height: 1.4; color: var(--muted); }
+.card p.note { font-size: 11.5px; color: var(--muted); margin: 4px 0; }
+.photos { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+.photos h4 { margin: 0 0 6px; font-size: 13px; }
+.thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.thumbs img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); cursor: zoom-in; display: block; background: var(--ctl); }
+.thumbs img:hover { border-color: var(--route); }
+#lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .88); display: flex; align-items: center; justify-content: center; cursor: zoom-out; }
+#lightbox figure { margin: 0; text-align: center; max-width: 94vw; }
+#lightbox img { max-width: 94vw; max-height: 84vh; border-radius: 8px; }
+#lightbox figcaption { margin-top: 8px; font-size: 12.5px; color: var(--ink); }
+#dataUsedList { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; }
+#dataUsedList li { margin: 2px 0; }
+@media (max-width: 900px) { #navHint { display: none; } }
+
+/* Block 4: language switch and validation block */
+#langSwitch { margin-top: 8px; }
+#langSwitch button { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 5px 4px; font-size: 12.5px; color: var(--muted); }
+#langSwitch button.on { color: var(--ink); }
+#langSwitch svg { width: 21px; height: 14px; border-radius: 2px; flex: none; }
+#validationBody ul { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; }
+#validationBody li { margin: 5px 0; }
+
+/* Panel tabs, astronaut presets, science goals, space weather */
+#tabs { grid-template-columns: repeat(4, 1fr); flex: none; }
+#tabs button { padding: 7px 2px; font-size: 12.5px; color: var(--muted); }
+#tabs button.on { color: var(--ink); box-shadow: inset 0 -2px 0 var(--route); }
+#panel .tab { display: flex; flex-direction: column; gap: 12px; }
+#segLoad { grid-template-columns: repeat(3, 1fr); }
+#segLoad button { padding: 6px 2px; font-size: 12.5px; }
+.science { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+.science h4 { margin: 0 0 4px; font-size: 13px; }
+.science p { font-size: 12.5px; }
+.card a, .science a { color: var(--route); }
+
+/* Wider panel, astronaut card above the result, label order, entrance globe and tutorial */
+@media (min-width: 901px) {
+  #panel { width: 480px; }
+  #profile { left: 506px; }
+}
+#panel header { position: relative; }
+#btnHelp { width: 26px; height: 26px; padding: 0; border-radius: 50%; line-height: 24px; font-weight: 600; }
+.pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: end; }
+.pair .field { margin: 0; }
+.swap { padding: 6px 9px; }
+.pair2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+#assumptions details { margin-top: 8px; }
+#assumptions summary { font-size: 11.5px; }
+#loadNote { min-height: 2.9em; }
+.label.habitat { z-index: 1; }
+.label.from, .label.to, .label.blocked { z-index: 2; }
+
+#intro { position: fixed; inset: 0; z-index: 100; background: #03040a; transition: opacity .7s ease; overflow: hidden; }
+#intro.out { opacity: 0; pointer-events: none; }
+#intro canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.intro-text { position: absolute; left: 6vw; top: 16vh; max-width: 430px; transition: opacity .6s ease; }
+#intro.flying .intro-text { opacity: 0; pointer-events: none; }
+.intro-kicker { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mars); }
+.intro-text h1 { font-size: 46px; line-height: 1.08; margin: 10px 0 12px; }
+.intro-lead { font-size: 16.5px; color: var(--ink); opacity: .9; }
+.intro-actions { display: flex; gap: 10px; margin-top: 24px; }
+.intro-actions button { padding: 10px 18px; font-size: 15px; }
+.intro-lang { margin-top: 26px; width: 190px; }
+.intro-lang button { padding: 5px 4px; font-size: 12.5px; color: var(--muted); }
+.intro-lang button.on { color: var(--ink); }
+.intro-gale { pointer-events: none; }
+.intro-credit { position: absolute; left: 6vw; right: 6vw; bottom: 16px; font-size: 11px; color: var(--muted); }
+@media (max-width: 900px) { .intro-text { top: 6vh; } .intro-text h1 { font-size: 32px; } }
+
+#tourRing { position: fixed; z-index: 60; border: 2px solid var(--route); border-radius: 10px; pointer-events: none;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .5); transition: all .25s ease; }
+#tourBubble { z-index: 61; width: 300px; font-size: 13.5px; border-color: var(--route); }
+#tourBubble .row { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 12px; }
+#tourBubble button { padding: 4px 10px; font-size: 12.5px; }
+
+/* Team emblem, fonts and the light/dark switch button */
+h1, .card h3, .intro-text h1 { font-family: var(--font-display); }
+button, select { font-family: var(--font); }
+#team { display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--line); padding-top: 10px; }
+#team img { width: 46px; height: 46px; border-radius: 6px; cursor: zoom-in; flex: none; }
+#team img.big { width: 100%; height: auto; cursor: zoom-out; }
+#team div { display: flex; flex-direction: column; font-size: 12px; }
+#team span { font-size: 11px; }
+.intro-team { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; font-size: 13px; color: var(--muted); }
+.intro-team img { width: 120px; height: 120px; border-radius: 8px; }
+#btnTheme { right: 34px; width: 26px; height: 26px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
+
+/* Two themes, switched by #btnTheme: "dark" (slate) and "light" (rounded chart). Same type, one strong blue for the route */
+html[data-theme] { --radius: 12px; --radius-sm: 8px; --blur: none;
+  --font: "Instrument Sans", system-ui, sans-serif; --font-display: "Bricolage Grotesque", "Instrument Sans", sans-serif; }
+html[data-theme] h1 { font-size: 26px; font-weight: 700; letter-spacing: -.4px; line-height: 1.05; }
+html[data-theme] button, html[data-theme] select, html[data-theme] .seg, html[data-theme] .card { border-radius: var(--radius-sm); }
+html[data-theme] .seg button { border-radius: 0; }
+html[data-theme] #compass, html[data-theme] #btnHelp, html[data-theme] #btnTheme { border-radius: 50%; }
+
+/* Dark: opaque slate panels a step lighter than the terrain, thin light border so they lift off the dark ground */
+html[data-theme="dark"] { --panel: #1f2a36; --line: rgba(214, 226, 238, .26); --ink: #e8edf2; --muted: #9fb0c1; --mars: #e8edf2;
+  --ctl: #283544; --ctl-on: #3b4c60; --card: #243140; --label-bg: #1f2a36; --on-accent: #04122a;
+  --shadow: 0 10px 28px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .06); }
+
+/* Light: chart panels, soft light border and soft shadow */
+html[data-theme="light"] { --panel: #eef2f4; --line: #c3ced8; --ink: #14263a; --muted: #51647a; --mars: #14263a; --ctl: #ffffff; --ctl-on: #14263a;
+  --card: #ffffff; --label-bg: #eef2f4; --on-accent: #ffffff; --shadow: 0 10px 28px rgba(0, 0, 0, .45); }
+html[data-theme="light"] .seg button.on, html[data-theme="light"] #tabs button.on, html[data-theme="light"] #langSwitch button.on,
+html[data-theme="light"] #navMode button.on, html[data-theme="light"] .intro-lang button.on { color: #ffffff; }
+html[data-theme="light"] button:hover { border-color: #7f93a6; }
+html[data-theme="light"] .label { color: var(--ink); font-weight: 500; }
+html[data-theme="light"] .label.from { background: var(--from); color: #fff; border-color: var(--from); }
+html[data-theme="light"] .label.to { background: var(--route); color: #fff; border-color: var(--route); }
+html[data-theme="light"] .label.blocked { background: var(--bad); color: #fff; border-color: var(--bad); }
+html[data-theme="light"] #rose text.n { fill: var(--ink); }
+html[data-theme="light"] #intro { --ink: #eef2f4; --muted: #a9b6c2; --line: rgba(238, 242, 244, .5); --ctl: transparent; --ctl-on: #eef2f4; }
+html[data-theme="light"] #intro .intro-lang button.on { color: #14263a; }
+
+/* Card tables: long values (dates, DONKI) wrap inside the panel instead of running out of it */
+.card td:last-child { white-space: normal; overflow-wrap: anywhere; }
+.card td:first-child { padding-right: 10px; }
+
+#lightbox figcaption { color: #ece8e1; }

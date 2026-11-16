@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caminata en Marte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<div id="view"></div>
+<div id="labels"></div>
+
+<aside id="panel" class="panel">
+  <header>
+    <button id="btnHelp" class="ghost" data-i18n-title="tour.help">?</button>
+    <button id="btnTheme" class="ghost"></button>
+    <h1 data-i18n="app.title">Caminata en Marte</h1>
+    <p class="muted" data-i18n="app.subtitle"></p>
+    <div id="langSwitch" class="seg" role="group" aria-label="Idioma / Language"></div>
+  </header>
+
+  <nav id="tabs" class="seg" role="tablist">
+    <button data-tab="route" data-i18n="tab.route"></button>
+    <button data-tab="map" data-i18n="tab.map"></button>
+    <button data-tab="today" data-i18n="tab.today"></button>
+    <button data-tab="data" data-i18n="tab.data"></button>
+  </nav>
+
+  <div class="tab" data-tab="route">
+    <section class="pair">
+      <label class="field"><span data-i18n="sel.from">Origen</span>
+        <select id="selFrom"></select>
+      </label>
+      <button id="btnSwap" class="swap" data-i18n-title="sel.swap">⇄</button>
+      <label class="field"><span data-i18n="sel.to">Destino</span>
+        <select id="selTo"></select>
+      </label>
+    </section>
+    <p class="hint" data-i18n="sel.hint"></p>
+
+    <section id="assumptions" class="card">
+      <h3 data-i18n="assume.title"></h3>
+      <div class="field" data-i18n="assume.load"></div>
+      <div class="seg" id="segLoad">
+        <button data-load="light" data-i18n="load.light"></button>
+        <button data-load="gear" data-i18n="load.gear"></button>
+        <button data-load="tired" data-i18n="load.tired"></button>
+      </div>
+      <p class="hint" id="loadNote"></p>
+      <div class="pair2">
+        <label class="slider"><span data-i18n="assume.eva"></span> <output id="outEva"></output>
+          <input type="range" id="inEva" min="4" max="10" step="0.5">
+        </label>
+        <label class="slider"><span data-i18n="assume.stay"></span> <output id="outStay"></output>
+          <input type="range" id="inStay" min="0" max="4" step="0.25">
+        </label>
+      </div>
+      <details>
+        <summary data-i18n="assume.more"></summary>
+        <p class="hint" data-i18n="assume.hint"></p>
+        <p class="hint" id="walkSpeedNote"></p>
+      </details>
+    </section>
+
+    <section id="result" class="card" hidden></section>
+  </div>
+
+  <div class="tab" data-tab="map" hidden>
+    <section>
+      <h2 data-i18n="layers.title"></h2>
+      <div class="seg" id="segMode">
+        <button data-mode="photo" id="btnPhoto" data-i18n="mode.photo"></button>
+        <button data-mode="tint" id="btnTint" data-i18n="mode.tint"></button>
+        <button data-mode="elev" data-i18n="mode.elev"></button>
+        <button data-mode="slope" data-i18n="mode.slope"></button>
+      </div>
+      <label class="check"><input type="checkbox" id="chkStops" checked> <span data-i18n="layers.track"></span></label>
+      <label class="field inline"><span data-i18n="layers.exag"></span>
+        <select id="selExag"><option value="1">1×</option><option value="2">2×</option><option value="3" selected>3×</option></select>
+      </label>
+      <label class="field inline"><span data-i18n="layers.walker"></span>
+        <select id="selWalker">
+          <option value="astronaut" selected data-i18n="walker.astronaut"></option>
+          <option value="rover" data-i18n="walker.rover"></option>
+          <option value="dot" data-i18n="walker.dot"></option>
+        </select>
+      </label>
+      <p class="hint" id="roverNote" hidden data-i18n="walker.roverNote"></p>
+    </section>
+
+    <details id="conventions" open>
+      <summary data-i18n="conv.title"></summary>
+      <table id="conventionsTable"></table>
+    </details>
+  </div>
+
+  <div class="tab" data-tab="today" hidden>
+    <section id="weather" class="card" hidden></section>
+    <section id="spaceWeather" class="card" hidden></section>
+  </div>
+
+  <div class="tab" data-tab="data" hidden>
+    <details id="dataUsed" open>
+      <summary data-i18n="du.title"></summary>
+      <ul id="dataUsedList"></ul>
+      <p class="hint" data-i18n="du.credits"></p>
+    </details>
+
+    <details id="validation" open>
+      <summary data-i18n="val.title"></summary>
+      <div id="validationBody"></div>
+    </details>
+  </div>
+
+  <div id="team"><img alt=""><div><strong data-i18n="team.name"></strong><span class="muted" data-i18n="team.ai"></span></div></div>
+
+  <footer class="muted">
+    <div id="status" data-i18n="status.loading"></div>
+  </footer>
+</aside>
+
+<div id="compass" class="panel" data-i18n-title="compass.title">
+  <svg viewBox="-50 -50 100 100" id="rose">
+    <circle r="46" class="ring"/>
+    <g id="needle">
+      <polygon points="0,-40 9,0 0,-6 -9,0" class="north"/>
+      <polygon points="0,40 9,0 0,6 -9,0" class="south"/>
+      <text y="-27" class="n">N</text>
+      <text x="33" y="4" class="c">E</text><text x="-33" y="4" class="c" data-i18n="compass.west">O</text><text y="38" class="c">S</text>
+    </g>
+  </svg>
+</div>
+
+<div id="navMode" class="panel seg" role="group">
+  <button data-nav="rotate" class="on" data-i18n-title="nav.rotateTitle"><span class="icon">⟲</span> <span data-i18n="nav.rotate"></span></button>
+  <button data-nav="pan" data-i18n-title="nav.panTitle"><span class="icon">✥</span> <span data-i18n="nav.pan"></span></button>
+</div>
+<div id="navHint" class="panel"></div>
+
+<div id="badge" class="panel">
+  <strong id="exagText"></strong>
+  <span class="muted" data-i18n="badge.real"></span>
+  <div id="legend"><span id="legendBar"></span><span id="legendText" class="muted"></span></div>
+  <div id="readout" class="muted" data-i18n="readout.hint"></div>
+  <div class="credit muted" data-i18n="badge.credit"></div>
+</div>
+
+<div id="profile" class="panel" hidden>
+  <div class="row"><strong data-i18n="profile.title"></strong><span id="profileInfo" class="muted"></span></div>
+  <canvas id="profileCanvas"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+<script>const DATA = /*__DATA__*/null;</script>
+/*__JS__*/
+</body>
+</html>
