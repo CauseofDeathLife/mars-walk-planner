@@ -44,6 +44,8 @@
     'profile.info': (walked, left, up, below, leftUp, h) => `${walked} m recorridos · faltan ${left} m · ${up} m ${below ? 'bajo' : 'sobre'} el origen · ` +
       `faltan ${leftUp} m de altura hasta el destino <small>(altura ${h} m)</small>`,
     'route.blockedLabel': '✕ Sin ruta segura',
+    'wl.dist': (walked, left) => `${walked} m recorridos · faltan ${left} m`,
+    'wl.height': (up, below, h) => `${up} m ${below ? 'bajo' : 'sobre'} el origen · altura ${h} m`,
     'res.noRoute': 'No hay ruta segura',
     'res.noRouteWhy': L => `No existe un camino entre estos dos puntos que evite las pendientes de más de ${L}°.`,
     'res.isolatedWhy': name => ` ${name} es terreno caminable, pero todo lo que la rodea supera ese límite.`,
@@ -190,6 +192,8 @@
     'profile.info': (walked, left, up, below, leftUp, h) => `${walked} m walked · ${left} m to go · ${up} m ${below ? 'below' : 'above'} the start · ` +
       `${leftUp} m of height left to the destination <small>(elevation ${h} m)</small>`,
     'route.blockedLabel': '✕ No safe route',
+    'wl.dist': (walked, left) => `${walked} m walked · ${left} m to go`,
+    'wl.height': (up, below, h) => `${up} m ${below ? 'below' : 'above'} the start · elevation ${h} m`,
     'res.noRoute': 'No safe route',
     'res.noRouteWhy': L => `There is no path between these two points that avoids slopes over ${L}°.`,
     'res.isolatedWhy': name => ` ${name} is walkable ground, but everything around it is over that limit.`,

@@ -16,7 +16,7 @@ from raster_sampling import bilinear
 from terrain_grid import block_mean
 from walk_grid import area_bounds
 
-JS_ORDER = ['core', 'i18n', 'terrain', 'scene', 'markers', 'walker', 'routes', 'walkmodel', 'profile', 'compass', 'legend', 'weather', 'spaceweather', 'science', 'photos', 'track', 'frame', 'validation', 'tabs', 'ui', 'sky', 'tour', 'intro', 'themepick', 'main']
+JS_ORDER = ['core', 'i18n', 'terrain', 'scene', 'markers', 'walker', 'routes', 'walkerlabel', 'walkmodel', 'profile', 'compass', 'legend', 'weather', 'spaceweather', 'science', 'photos', 'track', 'frame', 'validation', 'tabs', 'ui', 'sky', 'tour', 'intro', 'themepick', 'main']
 
 
 def encode(grid, ginfo):

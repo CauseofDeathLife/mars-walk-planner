@@ -9,6 +9,7 @@
   MW.track.init();
   MW.frame.init();
   MW.routes.init();
+  MW.walkerLabel.init();
   MW.profile.init();
   MW.compass.init();
   MW.legend.init();

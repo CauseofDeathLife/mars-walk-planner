@@ -126,6 +126,7 @@
     const total = current.d[current.d.length - 1], feet = positionAt(s, 0);
     const dir = s + HEADING_M <= total ? positionAt(s + HEADING_M, 0).sub(feet) : feet.clone().sub(positionAt(Math.max(s - HEADING_M, 0), 0));
     MW.walker.place(feet, dir);
+    MW.emit('walkerAt', s);
   }
 
   // Walk-through: the camera follows behind and above the walker. Progress is kept as elapsed time so
@@ -209,7 +210,7 @@
       view.renderer.domElement.addEventListener('wheel', () => refit(0.4), { passive: true });
     },
     current() { return current; },
-    showDot, hideDot() { MW.walker.hide(); },
+    showDot, hideDot() { MW.walker.hide(); MW.emit('walkerAt', null); },
     scenePoints() { return current ? scenePoints(current, 10) : [MW.markers.scenePosition(MW.state.from), MW.markers.scenePosition(MW.state.to)]; },
     startWalk, stopWalk, pauseWalk, resumeWalk,
     walkState() { return walkState; },
