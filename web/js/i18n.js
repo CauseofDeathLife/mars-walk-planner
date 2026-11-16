@@ -4,7 +4,7 @@
 (() => {
   const ES = {
     'app.title': 'Caminata en Marte',
-    'app.subtitle': 'Mapa para una caminata de astronautas en el monte Sharp, cráter Gale',
+    'app.subtitle': 'Mapa para una caminata de astronautas en el monte Sharp, cráter Gale *',
     'sel.from': 'Origen', 'sel.to': 'Destino', 'sel.swap': 'Invertir origen y destino',
     'sel.hint': 'También puedes hacer clic en un punto del mapa para escogerlo como destino.',
     'ui.pickDest': '— Escoge un destino —',
@@ -46,6 +46,7 @@
     'route.blockedLabel': '✕ Sin ruta segura',
     'wl.dist': (walked, left) => `${walked} m recorridos · faltan ${left} m`,
     'wl.height': (up, below, h) => `${up} m ${below ? 'bajo' : 'sobre'} el origen · altura ${h} m`,
+    'app.realNote': '* Todo el terreno es real: modelo de elevación y foto de la cámara HiRISE de la NASA, a 1 m por píxel. Nada es inventado.',
     'res.noRoute': 'No hay ruta segura',
     'res.noRouteWhy': L => `No existe un camino entre estos dos puntos que evite las pendientes de más de ${L}°.`,
     'res.isolatedWhy': name => ` ${name} es terreno caminable, pero todo lo que la rodea supera ese límite.`,
@@ -178,7 +179,7 @@
 
   const EN = {
     'app.title': 'Mars Walk',
-    'app.subtitle': 'A map for an astronaut walk on Mount Sharp, Gale crater',
+    'app.subtitle': 'A map for an astronaut walk on Mount Sharp, Gale crater *',
     'sel.from': 'Start', 'sel.to': 'Destination', 'sel.swap': 'Swap start and destination',
     'sel.hint': 'You can also click a point on the map to make it the destination.',
     'ui.pickDest': '— Pick a destination —',
@@ -220,6 +221,7 @@
     'route.blockedLabel': '✕ No safe route',
     'wl.dist': (walked, left) => `${walked} m walked · ${left} m to go`,
     'wl.height': (up, below, h) => `${up} m ${below ? 'below' : 'above'} the start · elevation ${h} m`,
+    'app.realNote': '* All the terrain is real: elevation model and photo from NASA\'s HiRISE camera, at 1 m per pixel. Nothing is invented.',
     'res.noRoute': 'No safe route',
     'res.noRouteWhy': L => `There is no path between these two points that avoids slopes over ${L}°.`,
     'res.isolatedWhy': name => ` ${name} is walkable ground, but everything around it is over that limit.`,

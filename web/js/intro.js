@@ -11,6 +11,7 @@
     box.querySelector('.intro-kicker').textContent = t('intro.kicker');
     box.querySelector('h1').textContent = t('app.title');
     box.querySelector('.intro-lead').textContent = t('intro.lead');
+    box.querySelector('.intro-real').textContent = t('app.realNote');
     box.querySelector('#introGo').textContent = t('intro.go');
     box.querySelector('#introSkip').textContent = t('intro.skip');
     box.querySelector('.intro-credit').textContent = t('intro.credit');
@@ -77,7 +78,7 @@
       if (!G || MW.quick) { setTimeout(() => MW.emit('introDone'), 0); return; }
       box = document.createElement('div');
       box.id = 'intro';
-      box.innerHTML = '<div class="intro-text"><div class="intro-team"></div><div class="intro-kicker"></div><h1></h1><p class="intro-lead"></p>' +
+      box.innerHTML = '<div class="intro-text"><div class="intro-team"></div><div class="intro-kicker"></div><h1></h1><p class="intro-lead"></p><p class="intro-real"></p>' +
         '<div class="intro-actions"><button id="introGo" class="primary"></button><button id="introSkip"></button></div>' +
         `<div class="intro-lang seg">${MW.langButtons()}</div></div>` +
         '<div class="label to intro-gale"></div><div class="intro-credit"></div>';

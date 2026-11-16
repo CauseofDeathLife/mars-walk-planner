@@ -60,7 +60,8 @@
     const { from, to } = MW.state, blocked = to && !MW.routes.find(from, to);
     items.forEach(it => {
       const role = it.p.id === from ? 'from' : it.p.id === to ? (blocked ? 'blocked' : 'to') : '';
-      it.mat.color.set(ROLE_COLOR[role] || BASE[it.p.kind]);
+      // the habitat stays white like a real surface habitat; its label still shows its role
+      it.mat.color.set(it.p.kind === 'habitat' ? BASE.habitat : ROLE_COLOR[role] || BASE[it.p.kind]);
       it.label.className = `label ${it.p.kind} ${role}`;
     });
   }
