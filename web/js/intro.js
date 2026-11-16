@@ -79,12 +79,12 @@
       box.id = 'intro';
       box.innerHTML = '<div class="intro-text"><div class="intro-team"></div><div class="intro-kicker"></div><h1></h1><p class="intro-lead"></p>' +
         '<div class="intro-actions"><button id="introGo" class="primary"></button><button id="introSkip"></button></div>' +
-        '<div class="intro-lang seg"><button data-lang="es">Español</button><button data-lang="en">English</button></div></div>' +
+        `<div class="intro-lang seg">${MW.langButtons()}</div></div>` +
         '<div class="label to intro-gale"></div><div class="intro-credit"></div>';
       document.body.appendChild(box);
       galeLabel = box.querySelector('.intro-gale');
       const E = MW.data.emblem;
-      if (E) box.querySelector('.intro-team').innerHTML = `<img alt="" src="data:image/jpeg;base64,${E.b64}"><span>${E.team}</span>`;
+      if (E) box.querySelector('.intro-team').innerHTML = `<img alt="" src="data:${E.mime || 'image/jpeg'};base64,${E.b64}"><span>${E.team}</span>`;
       try { renderer = new THREE.WebGLRenderer({ antialias: true }); } catch (e) { box.remove(); setTimeout(() => MW.emit('introDone'), 0); return; }
       renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
       renderer.setSize(box.clientWidth, box.clientHeight);

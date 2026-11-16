@@ -24,7 +24,7 @@
   MW.intro.init();
   MW.themepick.init();
   const E = data.emblem, teamBox = document.getElementById('team');
-  if (E) teamBox.querySelector('img').src = `data:image/jpeg;base64,${E.b64}`; else teamBox.hidden = true;
+  if (E) teamBox.querySelector('img').src = `data:${E.mime || 'image/jpeg'};base64,${E.b64}`; else teamBox.hidden = true;
   if (E) teamBox.querySelector('img').addEventListener('click', ev => ev.currentTarget.classList.toggle('big'));
 
   const centre = view.surface(data.meta.area_center[0], data.meta.area_center[1]);

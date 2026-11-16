@@ -386,8 +386,10 @@
     if (MW.view) MW.view.requestRender();
   };
 
+  // Language buttons with their flag, shared by the panel and the entrance screen
+  MW.langButtons = () => Object.keys(STR).map(l => `<button data-lang="${l}">${FLAG[l]}<span>${NAME[l]}</span></button>`).join('');
   const box = document.getElementById('langSwitch');
-  box.innerHTML = Object.keys(STR).map(l => `<button data-lang="${l}">${FLAG[l]}<span>${NAME[l]}</span></button>`).join('');
+  box.innerHTML = MW.langButtons();
   box.querySelectorAll('button').forEach(b => b.addEventListener('click', () => MW.setLang(b.dataset.lang)));
   applyDom();
 })();

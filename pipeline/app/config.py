@@ -23,7 +23,7 @@ COLOR_PHOTOS_FILE = os.path.join(DATA_DIR, 'curiosity_color_photos.json')   # Ma
 GLOBE_FILE = os.path.join(DATA_DIR, 'Mars_Viking_MDIM21_ClrMosaic_1km.jpg')   # Viking global colour mosaic (entrance globe)
 GLOBE_CACHE = os.path.join(OUT_DIR, 'globe_texture.jpg')
 EMBLEM_FILE = os.path.join(ROOT_DIR, '..', 'team_emblem', 'v7_no_grid_final.jpeg')   # AI-generated (Gemini), kept outside the repository
-EMBLEM_OUT = os.path.join(DATA_DIR, 'team_emblem_watermarked.jpg')          # the only copy in the repository
+EMBLEM_OUT = os.path.join(DATA_DIR, 'team_emblem_watermarked.png')          # the only copy in the repository
 DONKI_FILE = os.path.join(DATA_DIR, 'donki_latest.json')                    # latest CME reaching Mars (DONKI WSA-ENLIL)
 
 # Working area: 3.5 km square around Curiosity's stretch of test 1.7 (projected metres of the DTM)

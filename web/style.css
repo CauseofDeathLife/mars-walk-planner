@@ -169,8 +169,9 @@ footer { font-size: 12px; }
 .intro-lead { font-size: 16.5px; color: var(--ink); opacity: .9; }
 .intro-actions { display: flex; gap: 10px; margin-top: 24px; }
 .intro-actions button { padding: 10px 18px; font-size: 15px; }
-.intro-lang { margin-top: 26px; width: 190px; }
-.intro-lang button { padding: 5px 4px; font-size: 12.5px; color: var(--muted); }
+.intro-lang { margin-top: 26px; width: 260px; }
+.intro-lang button { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 5px 4px; font-size: 12.5px; color: var(--muted); }
+.intro-lang svg { width: 21px; height: 14px; border-radius: 2px; flex: none; }
 .intro-lang button.on { color: var(--ink); }
 .intro-gale { pointer-events: none; }
 .intro-credit { position: absolute; left: 6vw; right: 6vw; bottom: 16px; font-size: 11px; color: var(--muted); }
@@ -185,13 +186,13 @@ footer { font-size: 12px; }
 /* Team emblem, fonts and the light/dark switch button */
 h1, .card h3, .intro-text h1 { font-family: var(--font-display); }
 button, select { font-family: var(--font); }
-#team { display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--line); padding-top: 10px; }
-#team img { width: 46px; height: 46px; border-radius: 6px; cursor: zoom-in; flex: none; }
+#team { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-top: 1px solid var(--line); padding-top: 10px; }
+#team img { width: 120px; height: 120px; cursor: zoom-in; flex: none; }
 #team img.big { width: 100%; height: auto; cursor: zoom-out; }
-#team div { display: flex; flex-direction: column; font-size: 12px; }
+#team div { display: flex; flex-direction: column; font-size: 13px; gap: 4px; }
 #team span { font-size: 11px; }
-.intro-team { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; font-size: 13px; color: var(--muted); }
-.intro-team img { width: 120px; height: 120px; border-radius: 8px; }
+.intro-team { display: flex; flex-direction: column; align-items: center; width: fit-content; gap: 6px; margin-bottom: 14px; white-space: nowrap; font-size: 15px; color: var(--muted); }
+.intro-team img { width: min(290px, 33vh); height: min(290px, 33vh); flex: none; }
 #btnTheme { right: 34px; width: 26px; height: 26px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
 
 /* Two themes, switched by #btnTheme: "dark" (slate) and "light" (rounded chart). Same type, one strong blue for the route */

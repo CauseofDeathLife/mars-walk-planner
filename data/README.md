@@ -10,7 +10,7 @@
 | `curiosity_color_photos.json` | Mastcam colour frames, where published | https://mars.nasa.gov/api/v1/raw_image_items/ |
 | `rems_latest.json` | Latest REMS weather record (fallback when the live feed fails) | https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json |
 | `donki_latest.json` | Latest CME reaching Mars in the WSA-ENLIL simulations (fallback) | https://api.nasa.gov/DONKI/WSAEnlilSimulations |
-| `team_emblem_watermarked.jpg` | Team emblem, generated with AI (Gemini); carries a visible "AI-GENERATED IMAGE" watermark | Team Paisa Single Stage to Orbit |
+| `team_emblem_watermarked.png` | Team emblem, generated with AI (Gemini), cut round; carries a small visible "AI-generated image" watermark | Team Paisa Single Stage to Orbit |
 
 Each JSON records its source, retrieval date and selection rule.
 
