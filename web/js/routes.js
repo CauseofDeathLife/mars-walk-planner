@@ -105,7 +105,8 @@
     if (current) {
       const pts = scenePoints(current, 3);
       mesh = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), pts.length * 2, lastRadius, 6, false),
-        new THREE.MeshBasicMaterial({ color: MW.colors.route }));
+        new THREE.MeshBasicMaterial({ color: MW.colors.route, depthWrite: false }));
+      mesh.renderOrder = 1;   // after the terrain, before the walker: the walker is drawn over the line
     } else mesh = blockedDashes(from, to, lastRadius);
     view.overlay.add(mesh);
     view.requestRender();

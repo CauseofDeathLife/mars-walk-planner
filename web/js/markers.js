@@ -68,7 +68,8 @@
   // Curiosity's real track: a thin line through the aligned stops in sol order (the rovers with photos are in track.js)
   const STOP_LINE_LIFT = 4, STOP_LINE_STEP_M = 20, STOP_LINE_MAX_GAP_M = 1500;   // longer gaps: track left the DTM
   const stopsBySol = data.stops.slice().sort((a, b) => a[3] - b[3]);
-  const stopLine = new THREE.LineSegments(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: C.stops }));
+  const stopLine = new THREE.LineSegments(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: C.stops, depthWrite: false }));
+  stopLine.renderOrder = 1;   // like the route: drawn before the walker, so it never crosses over the figure
   function placeStops() {
     // the line follows the terrain between consecutive stops, a little above it
     const pos = [];
